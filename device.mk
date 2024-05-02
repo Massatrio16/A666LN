@@ -7,8 +7,8 @@
 
 LOCAL_PATH := device/itel/A666LN
 
-ENABLE_VIRTUAL_AB := true
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
+#ENABLE_VIRTUAL_AB := true
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 
 
 PRODUCT_PACKAGES_DEBUG += \
