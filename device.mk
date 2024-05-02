@@ -7,9 +7,8 @@
 
 LOCAL_PATH := device/itel/A666LN
 
-#ENABLE_VIRTUAL_AB := true
-#$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
-
+ENABLE_VIRTUAL_AB := true
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
@@ -66,8 +65,6 @@ PRODUCT_SHIPPING_API_LEVEL := 31
 # A/B
 
 
-
-
 PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.0-impl-mock \
+    android.hardware.fastboot@1.0-impl \
     fastbootd
