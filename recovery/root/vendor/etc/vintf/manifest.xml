@@ -1,24 +1,26 @@
+
 <!--
     Input:
-        manifest.xml
-        manifest_boot.xml
-        manifest_gnss.xml
-        manifest_network.xml
         manifest_tranlog.xml
         manifest_tranlogconfig.xml
-        nfc_manifest.xml
-        manifest_silead.xml
+        manifest_aiengine.xml
+        manifest.xml
+        manifest_boot.xml
+        manifest_typec.xml
+        manifest_gnss.xml
+        manifest_network.xml
+        manifest.xml
 -->
-<manifest version="5.0" type="device" target-level="7">
+<manifest version="4.0" type="device" target-level="6">
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
-        <version>7.1</version>
+        <version>7.0</version>
         <interface>
             <name>IDevicesFactory</name>
             <instance>default</instance>
         </interface>
-        <fqname>@7.1::IDevicesFactory/default</fqname>
+        <fqname>@7.0::IDevicesFactory/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.audio.effect</name>
@@ -39,6 +41,16 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.1::IBluetoothHci/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.bluetooth.audio</name>
+        <transport>hwbinder</transport>
+        <version>2.1</version>
+        <interface>
+            <name>IBluetoothAudioProvidersFactory</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@2.1::IBluetoothAudioProvidersFactory/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.boot</name>
@@ -103,12 +115,12 @@
     <hal format="hidl">
         <name>android.hardware.graphics.composer</name>
         <transport>hwbinder</transport>
-        <version>2.4</version>
+        <version>2.1</version>
         <interface>
             <name>IComposer</name>
             <instance>default</instance>
         </interface>
-        <fqname>@2.4::IComposer/default</fqname>
+        <fqname>@2.1::IComposer/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.graphics.mapper</name>
@@ -136,26 +148,6 @@
         <fqname>@1.0::IOmxStore/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.neuralnetworks</name>
-        <transport>hwbinder</transport>
-        <version>1.3</version>
-        <interface>
-            <name>IDevice</name>
-            <instance>armnn-gpu</instance>
-        </interface>
-        <fqname>@1.3::IDevice/armnn-gpu</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>android.hardware.nfc</name>
-        <transport>hwbinder</transport>
-        <version>1.2</version>
-        <interface>
-            <name>INfc</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.2::INfc/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.renderscript</name>
         <transport arch="32+64">passthrough</transport>
         <version>1.0</version>
@@ -166,34 +158,34 @@
         <fqname>@1.0::IDevice/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.nxp.nxpnfc</name>
+        <name>android.hardware.usb</name>
         <transport>hwbinder</transport>
-        <version>2.0</version>
+        <version>1.1</version>
         <interface>
-            <name>INxpNfc</name>
+            <name>IUsb</name>
             <instance>default</instance>
         </interface>
-        <fqname>@2.0::INxpNfc/default</fqname>
+        <fqname>@1.1::IUsb/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.nxp.nxpnfclegacy</name>
+        <name>vendor.goodix.hardware.biometrics.fingerprint</name>
+        <transport>hwbinder</transport>
+        <version>2.1</version>
+        <interface>
+            <name>IGoodixFingerprintDaemon</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@2.1::IGoodixFingerprintDaemon/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.sprd.hardware.ai_engine</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
-            <name>INxpNfcLegacy</name>
+            <name>IAIEngineControl</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::INxpNfcLegacy/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.silead.hardware.fingerprintext</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISileadFingerprint</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ISileadFingerprint/default</fqname>
+        <fqname>@1.0::IAIEngineControl/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.sprd.hardware.algoservice</name>
@@ -206,6 +198,16 @@
         <fqname>@1.0::IAlgoService/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.sprd.hardware.aprd</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IAprdInfoSync</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IAprdInfoSync/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.sprd.hardware.connmgr</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -215,17 +217,50 @@
         </interface>
         <fqname>@1.0::IConnmgr/default</fqname>
     </hal>
-    <hal format="aidl">
+    <hal format="hidl">
+        <name>vendor.sprd.hardware.cplog_svc</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ILogTransportInductor</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>ISysLogControl</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::ILogTransportInductor/default</fqname>
+        <fqname>@1.0::ISysLogControl/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.sprd.hardware.enhance</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
         <interface>
             <name>IEnhance</name>
             <instance>default</instance>
         </interface>
-        <fqname>IEnhance/default</fqname>
+        <fqname>@1.0::IEnhance/default</fqname>
     </hal>
-    <hal format="aidl">
+    <hal format="hidl">
+        <name>vendor.sprd.hardware.log</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ILogControl</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::ILogControl/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.sprd.hardware.network</name>
-        <fqname>INetworkControl/default</fqname>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>INetworkControl</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::INetworkControl/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.sprd.hardware.wcn</name>
@@ -236,6 +271,16 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::IWcnVendorInterface/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.transsion.hardware.camera.imgalgoservice</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IImgAlgoService</name>
+            <instance>internal/0</instance>
+        </interface>
+        <fqname>@1.0::IImgAlgoService/internal/0</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.transsion.hardware.tranlog</name>
@@ -258,6 +303,6 @@
         <fqname>@1.0::ITranLogConfig/default</fqname>
     </hal>
     <sepolicy>
-        <version>33.0</version>
+        <version>31.0</version>
     </sepolicy>
 </manifest>

@@ -1,4 +1,4 @@
-# Android device tree for Itel itel S665L (itel-A666LN)
+# Android device tree for Itel itel S665L (itel-S665L)
 
 ```
 #

@@ -5,7 +5,7 @@
         matrix_kernel_config_s_5.4.xml
         matrix_kernel_config_s_5.10.xml
 -->
-<compatibility-matrix version="5.0" type="framework" level="6">
+<compatibility-matrix version="4.0" type="framework" level="6">
     <hal format="hidl" optional="true">
         <name>android.hardware.atrace</name>
         <version>1.0</version>
@@ -243,7 +243,7 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl" optional="true">
+    <hal format="hidl" optional="false">
         <name>android.hardware.graphics.allocator</name>
         <version>2.0</version>
         <version>3.0</version>
@@ -271,7 +271,7 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl" optional="true">
+    <hal format="hidl" optional="false">
         <name>android.hardware.health</name>
         <version>2.1</version>
         <interface>
@@ -767,6 +767,10 @@
         <config>
             <key>CONFIG_CRYPTO_HMAC</key>
             <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CRYPTO_MD4</key>
+            <value type="tristate">n</value>
         </config>
         <config>
             <key>CONFIG_CRYPTO_MD5</key>
@@ -1941,6 +1945,10 @@
         <config>
             <key>CONFIG_CRYPTO_HMAC</key>
             <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CRYPTO_MD4</key>
+            <value type="tristate">n</value>
         </config>
         <config>
             <key>CONFIG_CRYPTO_MD5</key>
@@ -3139,6 +3147,10 @@
         <config>
             <key>CONFIG_CRYPTO_HMAC</key>
             <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_CRYPTO_MD4</key>
+            <value type="tristate">n</value>
         </config>
         <config>
             <key>CONFIG_CRYPTO_MD5</key>

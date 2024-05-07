@@ -5,7 +5,7 @@
         matrix_kernel_config_q_4.14.xml
         matrix_kernel_config_q_4.19.xml
 -->
-<compatibility-matrix version="5.0" type="framework" level="4">
+<compatibility-matrix version="4.0" type="framework" level="4">
     <hal format="hidl" optional="true">
         <name>android.hardware.atrace</name>
         <version>1.0</version>
@@ -194,7 +194,7 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl" optional="true">
+    <hal format="hidl" optional="false">
         <name>android.hardware.graphics.allocator</name>
         <version>2.0</version>
         <version>3.0</version>
@@ -220,7 +220,7 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl" optional="true">
+    <hal format="hidl" optional="false">
         <name>android.hardware.health</name>
         <version>2.0</version>
         <interface>
