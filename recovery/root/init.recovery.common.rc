@@ -2,6 +2,12 @@
 ## Please include it in /init.recovery.${ro.hardware}.rc
 #
 
+
+on fs
+    start load_modules
+
+
+
 service healthd /system/bin/healthd -r
     critical
     seclabel u:r:healthd:s0
