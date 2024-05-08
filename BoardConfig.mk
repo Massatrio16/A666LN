@@ -156,7 +156,7 @@ TW_USE_TOOLBOX := true
 TW_INCLUDE_REPACKTOOLS := true
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /dev/block/loop%d
-TW_EXCLUDE_DEFAULT_USB_INIT := true
+TW_INCLUDE_DEFAULT_USB_INIT := true
 TW_INCLUDE_NTFS_3G := true
 TW_BRIGHTNESS_PATH := "/sys/devices/platform/soc/soc:ap-ahb/31100000.dsi/31100000.dsi.0/display/panel0/sprd_backlight/brightness"
 TW_MAX_BRIGHTNESS := 2047
@@ -169,6 +169,8 @@ TW_EXCLUDE_TWRPAPP := true
 TW_NO_FLASH_CURRENT_TWRP := true
 #TW_OVERRIDE_SYSTEM_PROPS := "ro.build.date.utc;ro.build.product;ro.build.fingerprint=ro.system.build.fingerprint;ro.build.version.incremental;ro.product.device=ro.product.system.device;ro.product.model=ro.product.system.model;ro.product.name=ro.product.system.name"
 TW_DEVICE_VERSION := Massatrio16
+TW_CUSTOM_CPU_TEMP_PATH := true
+TW_HAS_MTP := true
 
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libtrusty \
