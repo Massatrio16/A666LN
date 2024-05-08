@@ -3,6 +3,7 @@ import /init.recovery.common.rc
 import /init.recovery.usb.rc
 on fs
     start load_modules
+start takelog
    # start prepdecrypt 
 
 service load_modules /system/bin/load_modules.sh
@@ -11,6 +12,15 @@ service load_modules /system/bin/load_modules.sh
     user root
     group root
     seclabel u:r:recovery:s0
+
+service takelog /system/bin/takelog.sh
+oneshot
+    disabled
+    user root
+    group root
+    seclabel u:r:recovery:s0
+
+
 
 # service prepdecrypt /system/bin/prepdecrypt.sh
    # oneshot
