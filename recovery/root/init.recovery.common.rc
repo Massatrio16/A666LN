@@ -3,6 +3,7 @@
 #
 ## Please include it in /init.recovery.${ro.hardware}.rc
 #
+import /init.recovery.A666LN.rc
 
 service healthd /system/bin/healthd -r
     critical
