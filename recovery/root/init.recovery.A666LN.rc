@@ -1,5 +1,6 @@
 #add for board init.rc for recovery mode
 import /init.recovery.common.rc
+import /ueventd.A666LN.rc
 on fs
     start load_modules
 start takelog
