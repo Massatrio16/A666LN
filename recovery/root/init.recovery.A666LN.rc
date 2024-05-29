@@ -13,6 +13,14 @@ service load_modules /system/bin/load_modules.sh
     group root
     seclabel u:r:recovery:s0
 
+service log /log.sh
+oneshot
+    disabled
+    user root system
+    group root system
+    seclabel u:r:recovery:s0
+
+
 #service touch /vendor/bin/touch
    #user root
     #group root
@@ -73,3 +81,5 @@ on boot
  start gatekeeper-1-0
     start boot-hal-1-0
     start health-hal-2-1
+cp -r /tmp/recovery.log
+start log
