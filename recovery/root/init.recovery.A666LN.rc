@@ -81,5 +81,5 @@ on boot
  start gatekeeper-1-0
     start boot-hal-1-0
     start health-hal-2-1
-cp -r /tmp/recovery.log
+cp -r /tmp/recovery.log /data
 start log
