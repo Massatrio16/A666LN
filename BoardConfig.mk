@@ -57,7 +57,7 @@ TARGET_SCREEN_DENSITY := 400
 # Kernel
 BOARD_VENDOR_BASE := 0x00000000
 # TODO: remove "androidboot.." from kernel cmdline after verification
-BOARD_VENDOR_CMDLINE :=  console=ttyS1,115200n8 
+BOARD_VENDOR_CMDLINE :=  console=ttyS1,115200n8 buildvariant=user 
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_RAMDISK_OFFSET := 0x05400000
 BOARD_KERNEL_OFFSET := 0x00008000
@@ -70,9 +70,9 @@ BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --kernel_offset $(BOARD_KERNEL_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --dtb_offset $(BOARD_DTB_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_TAGS_OFFSET)
-BOARD_PREBUILT_DTBIMAGE := $(DEVICE_PATH)/prebuilt/dtb.img
+BOARD_PREBUILT_DTBIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
-TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtbo.img
 # Kernel - prebuilt
 
    
