@@ -9,4 +9,8 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/twrp_A666LN.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_A666LN-eng
+    twrp_A666LN-user \
+    twrp_A666LN-userdebug \
+    twrp_A666LN-eng 
+    
+    
