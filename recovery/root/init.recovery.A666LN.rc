@@ -1,10 +1,12 @@
 #add for board init.rc for recovery mode
 import /init.recovery.common.rc
+import /init.A666LN.usb.rc
 
 on fs
     start load_modules
     start insmod-sh
    # start prepdecrypt 
+on early-init
 
 
 service insmod-sh /vendor/bin/init.insmod.sh /lib/modules/init.insmod.cfg ${ro.bootmode}
