@@ -3,7 +3,19 @@ import /init.recovery.common.rc
 
 on fs
     start load_modules
+    start insmod-sh
    # start prepdecrypt 
+
+
+service insmod-sh /vendor/bin/init.insmod.sh /lib/modules/init.insmod.cfg ${ro.bootmode}
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+
+
 
 service load_modules /system/bin/load_modules.sh
     oneshot
