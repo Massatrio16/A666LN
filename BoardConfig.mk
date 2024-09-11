@@ -171,4 +171,8 @@ TW_DEVICE_VERSION := Massatrio16
 #additional lib for fix decryption
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libtrusty \
-    $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)/libtrusty 
+    $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)/libtrusty \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libgatekeeper \
+    $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)/libgatekeeper \
+    $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.security.keymint-V2-ndk \
+    $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)/android.hardware.security.keymint-V2-ndk \
