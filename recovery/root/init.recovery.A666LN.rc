@@ -1,6 +1,6 @@
 #add for board init.rc for recovery mode
 import /init.recovery.common.rc
-
+import /init.recovery.logd.rc
 on fs
  install_keyring
     start load_modules
