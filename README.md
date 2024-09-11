@@ -1,4 +1,4 @@
-# Android device tree for Itel itel S665L (itel-S665L)
+# Android device tree for Itel P55 NFC (itel-A666LN)
 
 ```
 #
