@@ -195,8 +195,10 @@ TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster_portable \
     $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)/libkeymaster_portable \
     $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice \
-    $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)/libpuresoftkeymasterdevice  \
-$(TARGET_OUT_SHARED_LIBRARIES)/libgatekeeper.so \
+    $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)/libpuresoftkeymasterdevice \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libcppcose_rkp \
+    $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)/libcppcose_rkp \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libgatekeeper.so \
     $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)/libgatekeeper.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.security.keymint-V2-ndk.so \
     $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)/android.hardware.security.keymint-V2-ndk.so\
@@ -220,3 +222,5 @@ $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.security.sharedsecret-V1-ndk.so 
     $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)/libkeymaster_portable.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so \
     $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so 
+    $(TARGET_OUT_SHARED_LIBRARIES)/libcppcose_rkp.so \
+    $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)/libcppcose_rkp.so \
