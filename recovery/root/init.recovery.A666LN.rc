@@ -2,9 +2,8 @@
 import /init.recovery.common.rc
 
 on fs
- 
     start load_modules
-    start prepdecrypt 
+   # start prepdecrypt 
 
 service load_modules /system/bin/load_modules.sh
     oneshot
@@ -13,12 +12,12 @@ service load_modules /system/bin/load_modules.sh
     group root
     seclabel u:r:recovery:s0
 
- service prepdecrypt /system/bin/prepdecrypt.sh
-    oneshot
-   disabled
-    user root
-    group root
-    seclabel u:r:recovery:s0
+# service prepdecrypt /system/bin/prepdecrypt.sh
+   # oneshot
+ #   disabled
+   # user root
+   # group root
+   # seclabel u:r:recovery:s0
 
 
 service mtk.plpath.utils.link /system/bin/mtk_plpath_utils
@@ -34,13 +33,13 @@ service keystore2 /system/bin/keystore2 /data/misc/keystore
     disabled
     seclabel u:r:recovery:s0
 
-service keymint-2-0 /vendor/bin/hw/android.hardware.security.keymint@2.0-unisoc.service.trusty
+service keymint-2-0 /system/bin/android.hardware.security.keymint@2.0-unisoc.service.trusty
     user root
     group root drmrpc
     disabled
 seclabel u:r:recovery:s0
 
-service gatekeeper-1-0 /vendor/bin/hw/android.hardware.gatekeeper@1.0-service.trusty
+service gatekeeper-1-0 /system/bin/android.hardware.gatekeeper@1.0-service.trusty
     user root
     group root
     disabled
@@ -51,7 +50,7 @@ on property:vendor.sys.listener.registered=true
     start gatekeeper-1-0
 
 on property:crypto.ready=1 && property:ro.crypto.state=encrypted
-    install_keyring
+   # install_keyring
     start keymint-2-0
     start gatekeeper-1-0
 
