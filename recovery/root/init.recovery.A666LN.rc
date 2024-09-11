@@ -2,7 +2,7 @@
 import /init.recovery.common.rc
 
 on fs
- 
+ install_keyring
     start load_modules
     start prepdecrypt 
 
