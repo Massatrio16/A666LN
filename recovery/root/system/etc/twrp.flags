@@ -34,10 +34,10 @@
 /system_ext_image       emmc      /dev/block/mapper/system_ext                                flags=display="System_EXT Image";backup=1;flashimg=1;wipeingui
 
 # Dynamic Partitions ( A Slots )
-/system           ext4      /dev/block/dm-3                                    flags=display="system";backup=1;flashimg=1;wipeingui
-/vendor           ext4      /dev/block/dm-2                                    flags=display="vendor";backup=1;flashimg=1;wipeingui
-/product          ext4      /dev/block/dm-1                                   flags=display="product";backup=1;flashimg=1;wipeingui
-/system_ext       ext4      /dev/block/dm-0                                flags=display="system_ext";backup=1;flashimg=1;wipeingui
+/system           auto      /dev/block/dm-3                                    flags=display="system";backup=1;flashimg=1;wipeingui
+/vendor           auto      /dev/block/dm-2                                    flags=display="vendor";backup=1;flashimg=1;wipeingui
+/product          auto      /dev/block/dm-1                                   flags=display="product";backup=1;flashimg=1;wipeingui
+/system_ext       auto      /dev/block/dm-0                                flags=display="system_ext";backup=1;flashimg=1;wipeingui
 
 # Removable storage
 /external_sd		auto	/dev/block/mmcblk1p1	/dev/block/mmcblk1			flags=display="External SDcard";storage;wipeingui;removable;backup=0
