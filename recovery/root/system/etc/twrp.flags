@@ -15,7 +15,7 @@
 
 /vbmeta_odm                  emmc    /dev/block/by-name/vbmeta_odm            flags=display="VBMeta_vendor";backup=1;flashimg=1;slotselect
 
-/vbmeta_product                  emmc    /dev/block/by-name/vbmeta_product            flags=display="VBMeta_vendor";backup=1;flashimg=1;slotselect
+/vbmeta_product                  emmc    /dev/block/by-name/vbmeta_product            flags=display="VBMeta_product";backup=1;flashimg=1;slotselect
 
 ## Firmware
 
@@ -28,10 +28,22 @@
 /tranfs ext4 /dev/block/by-name/tranfs flags=display="tranfs"
 /miscdata emmc /dev/block/by-name/miscdata flags=display="miscdata"
 
-/system_image           emmc      /dev/block/mapper/system_a       /dev/block/mapper/system_b                             flags=display="System Image";backup=1;flashimg=1;wipeingui
-/vendor_image          emmc      /dev/block/mapper/vendor_a         /dev/block/mapper/vendor_b                           flags=display="Vendor Image";backup=1;flashimg=1;wipeingui
-/product_image          emmc      /dev/block/mapper/product_a        /dev/block/mapper/product_b                           flags=display="Product Image";backup=1;flashimg=1;wipeingui
-/system_ext_image       emmc      /dev/block/mapper/system_ext_a       /dev/block/mapper/system_ext_b                         flags=display="System_EXT Image";backup=1;flashimg=1;wipeingui
+/system_image_a           emmc      /dev/block/mapper/system_a                                flags=display="System Image A";flashimg=1
+/vendor_image_a           emmc      /dev/block/mapper/vendor_a                                  flags=display="Vendor Image A";flashimg=1
+/product_image_a          emmc      /dev/block/mapper/product_a                                 flags=display="Product Image A";flashimg=1
+/system_ext_image_a       emmc      /dev/block/mapper/system_ext_a                            flags=display="System_EXT Image A";flashimg=1
+
+
+
+/system_image_b           emmc         /dev/block/mapper/system_b                             flags=display="System Image B";flashimg=1
+/vendor_image_b           emmc          /dev/block/mapper/vendor_b                           flags=display="Vendor Image B";flashimg=1
+/product_image_b          emmc         /dev/block/mapper/product_b                           flags=display="Product Image B";flashimg=1
+/system_ext_image_b       emmc        /dev/block/mapper/system_ext_b                         flags=display="System_EXT Image B";flashimg=1
+
+
+
+
+
 
 # Dynamic Partitions ( A Slots )
 /system           auto      /dev/block/dm-3                                    flags=display="system";backup=1;wipeingui
