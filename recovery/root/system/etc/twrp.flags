@@ -28,10 +28,10 @@
 /tranfs ext4 /dev/block/by-name/tranfs flags=display="tranfs"
 /miscdata emmc /dev/block/by-name/miscdata flags=display="miscdata"
 
-/system_image           emmc      /dev/block/mapper/system                                    flags=display="System Image";backup=1;flashimg=1;wipeingui
-/vendor_image          emmc      /dev/block/mapper/vendor                                    flags=display="Vendor Image";backup=1;flashimg=1;wipeingui
-/product_image          emmc      /dev/block/mapper/product                                   flags=display="Product Image";backup=1;flashimg=1;wipeingui
-/system_ext_image       emmc      /dev/block/mapper/system_ext                                flags=display="System_EXT Image";backup=1;flashimg=1;wipeingui
+/system_image           emmc      /dev/block/mapper/system_a       /dev/block/mapper/system_b                             flags=display="System Image";backup=1;flashimg=1;wipeingui
+/vendor_image          emmc      /dev/block/mapper/vendor_a         /dev/block/mapper/vendor_b                           flags=display="Vendor Image";backup=1;flashimg=1;wipeingui
+/product_image          emmc      /dev/block/mapper/product_a        /dev/block/mapper/product_b                           flags=display="Product Image";backup=1;flashimg=1;wipeingui
+/system_ext_image       emmc      /dev/block/mapper/system_ext_a       /dev/block/mapper/system_ext_b                         flags=display="System_EXT Image";backup=1;flashimg=1;wipeingui
 
 # Dynamic Partitions ( A Slots )
 /system           auto      /dev/block/dm-3                                    flags=display="system";backup=1;flashimg=1;wipeingui
