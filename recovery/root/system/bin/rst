@@ -1,0 +1,15 @@
+slot=$(getprop ro.boot.slot_suffix)
+
+if [ "${slot}" = "_a" ]; then
+dd if=/sdcard/vendor of=/dev/block/mapper/vendor_a
+dd if=/sdcard/vendor_dlkm of=/dev/block/mapper/vendor_dlkm_a 
+dd if=/sdcard/vendor_dlkm of=/dev/block/mapper/odm_a 
+elif [ "${slot}" = "_b" ]; then
+dd if=/sdcard/vendor of=/dev/block/mapper/vendor_b
+dd if=/sdcard/vendor_dlkm of=/dev/block/mapper/vendor_dlkm_b
+dd if=/sdcard/vendor_dlkm of=/dev/block/mapper/odm_b
+else
+dd if=/sdcard/vendor of=/dev/block/mapper/vendor
+dd if=/sdcard/vendor_dlkm of=/dev/block/mapper/vendor_dlkm
+dd if=/sdcard/vendor_dlkm of=/dev/block/mapper/odm
+fi
